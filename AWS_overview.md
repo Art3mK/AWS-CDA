@@ -21,7 +21,7 @@ These locations sit between your origin webserver and the 68 global edge locatio
 Regional Edge Caches have larger cache-width than any individual edge location, so your objects remain in cache longer at these locations
 For instance, our edge locations in Europe now go to the regional edge cache in Frankfurt to fetch an object before going back to your origin webserver.
 
-#Compute
+# Compute
 
 # EC2
 
