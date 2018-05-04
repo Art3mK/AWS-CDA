@@ -243,7 +243,7 @@ Machine translation service
 
 ## Amazon Transcribe
 
-распознование речи
+распознавание речи
 
 # Analytics
 
@@ -276,3 +276,138 @@ moving data between services
 ## Glue
 
 data ETL service
+
+# part 4
+
+## Security & Identity & Compliance
+
+### IAM
+
+Identity and access management
+
+### Congito
+
+Device auth, mobile apps (facebook, gmail, etc). Device store data in AWS resources
+
+### GuardDuty
+
+Monitors for malicius activity
+
+### Inspector
+
+Agent on VM to testing security things, schedule, reporting
+
+### Macie
+
+Scan S3 buckets for personal information
+
+### Certificate Manager
+
+Free SSL certificates
+
+### CloudHSM
+
+hardware security module to store keys
+
+### Directory Service
+
+on-premises AD integrating with AWS services
+
+### WAF
+
+Web App Firewall
+
+### Shield
+
+Enabled by default for LBs, cloudfront. Prevents DDOS attacks. Advanced versions available
+
+### Artifact
+
+Compliance reports, PCI reports
+
+## Mobile services
+
+### Mobile hub
+
+mgmt console
+
+### Pinpoint
+
+Push notifications?
+
+### AWS AppSync
+
+Updates state of web and mobile apps?
+
+### Device Farm
+
+testing apps on real devices
+
+### Mobile analytics
+
+## AR/VR
+
+- Sumerian
+
+## App integration
+
+- Step functions
+- Amazon MQ
+- SNS (2006)
+  * notification service
+- SQS
+  * simple queue service
+- SWF
+  * Simple workflow service
+  * Used in amazon warehouses
+  * includes human actors
+
+## Customer engagement
+
+### Connect
+
+Contanct center as a service
+
+### Simple Email Service
+
+## Business Productivity
+
+### Alexa for business
+
+### Chime
+
+video conferencing, record meetings
+
+### Work docs
+
+Dropbox for AWS
+
+### WorkMail
+
+Amazon Office365 version
+
+## Desktop && App Streaming
+
+### Workspaces
+
+DE in cloud
+
+### AppStream 2.0
+
+Streaming apps to device (аля Citrix)
+
+## IOT
+
+### IoT
+
+### IoT Device management
+
+### Amazon FreeRTOS
+
+Free OS for microcontrollers
+
+### Greengrass
+
+## Game Development
+
+### GameLift
