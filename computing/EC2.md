@@ -45,35 +45,25 @@ VM in Cloud.
 
 ![alt](../images/instance_types_2.png)
 
+## Types
 
-## EBS
+- HVM
+- PV
 
-- EBS are placed in a specific AZ, where they are automatically replicated. (Not to different AZ, but between SANs)
-- cannot mount to multiple instances
+## Security groups
 
-Bootable:
-- Magentic standard (bootable)
-- GP2
-- IO1
+Security groups are stateful.
+- all inbound is blocked by default
+- all outbound is allowed by default
+- changes take effect immediately
+- any number of EC2 instances within a security group
+- multiple groups per EC2 instance
+- no block rules
 
-### Volume types
 
-- GP2, general purpose SSD
-    * 3 IOPS per GB with up to 10k IOPS, burst up to 3k IOPS
-- Provisioned IOPS SSD (IO1)
-    * I/O intensive
-    * if you need >10k IOPS
-    * provision up to 20k IOPS
-- Throughput optimized HDD (ST1)
-    * big data
-    * data warehouses
-    * Log processing
-    * sequential data
-    * cannot be a boot volume
-- Cold HDD (SC1)
-    * low cost
-    * file server
-    * cannot be a boot volume
-- Magnetic (Standard)
-    * bootable
-    * lowest cost
+## Gothas
+
+- default action is for the EBS to be deleted when the instance is terminated
+- termination protection is off by default
+- can't encrypt boot volume for standard AMIs
+- one subnet - one AZ
