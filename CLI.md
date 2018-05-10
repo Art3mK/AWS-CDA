@@ -1,4 +1,4 @@
-## running instances
+## CLI commands
 
 * describe-instances
 * describe-images
