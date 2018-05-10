@@ -43,3 +43,11 @@ Access using facebook, google, etc
 - get temp security creds with AssumeRoleWithWebIdentity request (assumes some role)
 - access resources using assumed role
 
+## Role types
+
+- AWS Service Role
+- AWS service-linked roles
+  * Lex bots and channels
+- Role for cross-account access
+- Role for identity provider access
+  * access for idP users to AWS account
