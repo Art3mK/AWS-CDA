@@ -2,7 +2,7 @@
 
 VM in Cloud.
 
-### EC2 options
+### EC2 pricing options
 - on demand, by the hour (or by the second, linux only)
     * low cost adn flexibility without up-front payments
     * app with short term, spiky workloads
@@ -60,6 +60,10 @@ Security groups are stateful.
 - multiple groups per EC2 instance
 - no block rules
 
+## Metadata
+
+http://169.254.169.254/latest/meta-data/
+http://169.254.169.254/latest/user-data/
 
 ## Gothas
 
@@ -67,3 +71,8 @@ Security groups are stateful.
 - termination protection is off by default
 - can't encrypt boot volume for standard AMIs
 - one subnet - one AZ
+
+## AMIs
+
+- AMIs are regional
+- can copy between regions (console, command line, API)
