@@ -62,3 +62,9 @@ How:
 - can't stop. If the underlying host fails - will lose data
 - EBS backed can be stopped
 - Can reboot both
+
+----------
+
+## Links
+
+- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html
