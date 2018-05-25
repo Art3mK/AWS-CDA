@@ -71,8 +71,16 @@ http://169.254.169.254/latest/user-data/
 - termination protection is off by default
 - can't encrypt boot volume for standard AMIs
 - one subnet - one AZ
+- 20 on-demand instances across the instance family by default
+- Nitro hypervisor (new, foc C5) vs Xen
+- SRV-IO on HVM AMI with drivers, ENA elastic network adapter
+- no additional fee for enhanced networking
 
 ## AMIs
 
 - AMIs are regional
 - can copy between regions (console, command line, API)
+
+## Q. What is a cluster placement group?
+
+A cluster placement group is a logical entity that enables creating a cluster of instances by launching instances as part of a group. The cluster of instances then provides low latency connectivity between instances in the group. Cluster placement groups are created through the Amazon EC2 API or AWS Management Console.
