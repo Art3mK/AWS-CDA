@@ -21,8 +21,13 @@ Lamba scales out automatically
 
 ### Duration
 
+- default timeout is 3 seconds
 - max 5 minutes
 - $0.00001667 for every GB-second used
+
+### Resources
+
+You cant set your memory in 64Mb increments from 128Mb to 3Gb.
 
 ## Lambda triggers
 
