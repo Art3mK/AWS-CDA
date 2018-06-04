@@ -49,7 +49,7 @@ capacity unit = 1 operation per second
 * read provisioned throughput
     * all reads are rounded up increments to 4Kb
     * eventually consistent reads - 2 reads per second
-    * storgly consistent reads - 1 read per second
+    * strongly consistent reads - 1 read per second
 * write
     * all writes are 1Kb
     * all writes consist of 1 write per second
@@ -85,6 +85,11 @@ When limit exceeded
 
 limit exceeded for a table or for one or more global secondary indexes
 
+A decrease is allowed up to four times any time per day
+
+if there was no decrease in the past hour, an additional decrease is allowed, effectively bringing the maximum number of decreases in a day to 27 times (4 decreases in the first hour, and 1 decrease for each of the subsequent 1-hour windows in a day).
+
+
 ## Indexes
 
 ### Primary keys
@@ -95,6 +100,7 @@ Partition key/Hash key
 
 - one attribute
 - no two items can have the same partition key value
+- The minimum length of a partition key value is 1 byte. The maximum length is 2048 bytes.
 
 input to an internal hash function. Function output determines the partition (physical location)
 
@@ -104,6 +110,7 @@ Partition key && Sort Key (Hash & Range) composed of two attributes
 
 - two items can have the same partition key, but they must have a different sort key
 - all items with the same partition key are stored together, in sorted order by sort key value
+- The minimum length of a sort key value is 1 byte. The maximum length is 1024 bytes.
 
 ----
 
@@ -111,11 +118,16 @@ Partition key && Sort Key (Hash & Range) composed of two attributes
 
 * the same partition key, different sort key
 * can only be created during table creation. They cannot be removed or modified later
+* max 5 indexes
+* local secondary indexes share provisioned throughput with parent table
 
 #### Global secondary index
 
 * has different partition key and different sort key
 * can be added during table creation or added later
+* own provisioned throughput
+* max 5 indexes
+* only eventually consistent reads
 
 ## Streams
 
@@ -136,6 +148,8 @@ query - by using only primary key attribute values, you must provide a partition
 yuo can optionally provide a sort key attribute name and value, nand use a comparison operator to refine the search results.
 
 by default query returns all attirubets. You can use `ProjectionExpression` param to return only some of the attributes.
+
+You can project a total of up to 20 attributes into all of a table's local and global secondary indexes. This only applies to user-specified projected attributes.
 
 Results are always sorted by the sort key. Sort order is ascending. To reverse the order, set the `ScanIndexForward` parameter to false
 
