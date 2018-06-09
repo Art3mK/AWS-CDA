@@ -18,7 +18,7 @@ Amazon DynamoDB stores three geographically distributed replicas of each table t
 
 - returns a result that reflects all writes that received a successful response prior to the read
 
-## queries
+## Queries
 
 - GET/PUT using a user-defined primary key
 
