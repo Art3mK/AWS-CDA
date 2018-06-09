@@ -8,5 +8,5 @@
 
 ```bash
 # run-instances
-aws ec2 run-instances --security-group-ids sg-ca7b91a0 --subnet-id subnet-6e8d8e16 --key-name 'artem.kajalainen@gofore.com' --count 1 --image-id ami-b144195a --instance-type t2.micro
+aws ec2 run-instances --security-group-ids sg-ca7b91a0 --subnet-id subnet-6e8d8e16 --key-name 'artem.kajalainen@example.com' --count 1 --image-id ami-b144195a --instance-type t2.micro
 ```
